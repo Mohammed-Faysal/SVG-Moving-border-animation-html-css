@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, blue 0%, #000 100%);
+}
+
+.svg-container {
+  width: 400px;
+}
+
+ /* Outer stroke (background stroke) */
+ .outer-border {
+  fill: none;
+  stroke: #007bff; /* Outer stroke color */
+  stroke-width: 8; /* Thicker stroke for outer */
+}
+
+
+.moving-border {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 4;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 0;
+  stroke-linecap: round; /* Rounded dashes */
+  animation: move 1s linear infinite;
+}
+
+image{
+  stroke-linecap: round;
+}
+
+@keyframes move {
+  to {
+      stroke-dashoffset: -40;
+  }
+}
+
